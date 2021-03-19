@@ -30,7 +30,7 @@
 						</tr>
 					</thead>
 					<tbody id="tb2">
-						<tr id="1st">
+						<tr id="1st_index1">
 							<td class="col-xs-3"><input class="form-control input-sm" id="cheat_reward" value='' /></td>
 							<td class="col-xs-3"><input class="form-control input-sm" id="cheat_name" value='' /></td>
 						</tr>
@@ -103,9 +103,9 @@
 					contentType: "application/json; charset=UTF-8",
 					async: false, // 設定同步 預設true 非同步 防止alert前就先跳頁
 					success: function (data) {
-						console.log('data', data);
 						alert("內定人員設定完畢！");
-						$("#cheatFormDiv").attr("hidden", true);
+						// $("#cheatFormDiv").attr("hidden", true);
+						$("#cheatFormDiv").hide();
 						$("#div0").html(data);
 					},
 					error: function (data) {
@@ -142,7 +142,6 @@
 
 			// 刪除當前獎品欄位
 			function del(obj) {
-				debugger;
 				var trId = obj.parentNode.parentNode.id;
 				var trObj = document.getElementById(trId);
 				document.getElementById("tb").removeChild(trObj);
@@ -196,7 +195,8 @@
 						data: JSON.stringify(data),
 						contentType: "application/json; charset=UTF-8",
 					}).done(function (data) {
-						$("#div0").attr("hidden", true);
+						// $("#div0").attr("hidden", true);
+						$("#div0").hide();
 						$("#div1").html(data);
 						settingResultPageHeight();
 					}).fail(function () {
@@ -220,9 +220,11 @@
 				console.log('行數:', numOfTr);
 				var tr_height = ((parseInt(numOfTr) + 1) * 25);
 				console.log('高:', tr_height);
-				// 當行數的高度 > 原本高度 再去重算高度 否則就設400px
+				// 當行數的高度 > 原本高度 再去重算高度 否則就預設400px
+				var totalTrHeight = ((parseInt(numOfTr) + 3) * 25) + 25;
 				if (tr_height > 400) {
-					document.getElementById('resultContain').style.height = (((parseInt(numOfTr) + 3) * 25) + 25).toString() + 'px';
+					document.getElementById('resultContain').style.height = totalTrHeight.toString() + 'px';
+					document.getElementById('resultContain').style.marginTop = '-' + totalTrHeight + 'px';
 				} else {
 					document.getElementById('resultContain').style.height = '400px';
 				}

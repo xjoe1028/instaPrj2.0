@@ -17,24 +17,6 @@
 		<div class="container-login100">
 			<div class="cheatForm" id="index2Contain">
 				<div class="instaQueryForm">
-					<!-- 1.0用table顯示 -->
-					<!-- <table id="queryTable" border="0" class="queryTableClass">
-						<br>
-						<div style="font-size: 20px;font-weight: 800; text-align: center;">Instagram Picker</div>
-						<tr>
-							<th style="text-align: center;">貼文網址：</th>
-							<td class="col-xs-6">
-								<input class="form-control input-sm" id="url"
-									placeholder="ex. https://www.instagram.com/p/B-ZEuJypDtG/" />
-							</td>
-						</tr>
-						<tr>
-							<th style="text-align:center;">可以重複留言：</th>
-							<td>
-								<input id="repeat" type="checkbox" />
-							</td>
-						</tr>
-					</table> -->
 					<br>
 					<div style="font-size: 20px;font-weight: 800; text-align: center;">Instagram Picker</div>
 					<br>
@@ -42,7 +24,9 @@
 						<div class="col-12 mt-2 mb-2">
 							<div class="row">
 								<div class="col-12 col-lg-3">
-									<label for="">貼文網址：</label>
+									<div class="row">
+										<label for="" class="font-weight-bolder">貼文網址：</label>
+									</div>
 								</div>
 								<div class="col-12 col-lg-8">
 									<input class="form-control input-sm" id="url"
@@ -53,7 +37,9 @@
 						<div class="col-12 mt-2 mb-2">
 							<div class="row">
 								<div class="col-12 col-lg-3">
-									<label for="">可以重複留言：</label>
+									<div class="row">
+										<label for="" class="font-weight-bolder">可以重複留言：</label>
+									</div>
 								</div>
 								<div class="col-12 col-lg-8">
 									<input id="repeat" type="checkbox" />
@@ -72,14 +58,11 @@
 									<button onclick="add()" class="index2Btn">
 										增加
 									</button>
-									<!-- <input type="button" value="增加" onclick="add()"
-										style="font-weight: 500;font-size: 15px"> -->
 								</td>
 							</tr>
 						</thead>
 						<tbody id="tb">
-
-							<tr id="1st">
+							<tr id="1st_index2">
 								<td class="col-xs-5">
 									<input class="form-control input-sm" id="reward" />
 								</td>
@@ -97,15 +80,11 @@
 										<option>10</option>
 									</select>
 								</td>
-
 								<td class="col-xs-2">
 									<button onclick="del(this)" class="index2Btn">
 										刪除
 									</button>
-									<!-- <input type="button" value="刪除" onclick="del(this)"
-										style="font-weight: 500;font-size: 15px"> -->
 								</td>
-
 							</tr>
 						</tbody>
 
@@ -123,18 +102,12 @@
 											</button>
 										</div>
 									</div>
-									<!-- <button id="btn1" onclick="sendFun()" class="index2Btn">
-										抽獎！
-									</button> -->
 								</td>
 							</tr>
 						</tfoot>
 					</table>
 				</div>
 
-				<!-- <div class="container"> -->
-
-				<!-- </div> -->
 			</div>
 			<div id="picking"
 				style="background-color: gray; position: absolute;left: 50%;top: 50%; margin-top: -150px;margin-left: -280px; height: 300px;width:600px ;"
