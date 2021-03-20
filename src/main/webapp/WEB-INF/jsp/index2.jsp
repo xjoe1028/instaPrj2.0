@@ -34,7 +34,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 mt-2 mb-2">
+						<br>
+						<div class="col-12 mt-4 mb-2">
 							<div class="row">
 								<div class="col-12 col-lg-3">
 									<div class="row">
@@ -55,14 +56,14 @@
 								<td class="col-xs-5"><label for="">獎品</label></td>
 								<td class="col-xs-2"><label for="">抽獎人數</label></td>
 								<td class="col-xs-2">
-									<button onclick="add()" class="index2Btn">
+									<button onclick="addPrize()" class="index2Btn">
 										增加
 									</button>
 								</td>
 							</tr>
 						</thead>
 						<tbody id="tb">
-							<tr id="1st_index2">
+							<tr id="index2_1st">
 								<td class="col-xs-5">
 									<input class="form-control input-sm" id="reward" />
 								</td>
@@ -81,17 +82,16 @@
 									</select>
 								</td>
 								<td class="col-xs-2">
-									<button onclick="del(this)" class="index2Btn">
+									<!-- <button onclick="delPrize(this)" class="index2Btn">
 										刪除
-									</button>
+									</button> -->
 								</td>
 							</tr>
 						</tbody>
 
 						<tfoot>
 							<tr>
-								<td colspan="1">
-								</td>
+								<td colspan="1"></td>
 								<td colspan="2">
 									<!-- login100-form-bgbtn 在main.css 有彩色跟藏青藍樣式 -->
 									<div class="container-login100-form-btn">

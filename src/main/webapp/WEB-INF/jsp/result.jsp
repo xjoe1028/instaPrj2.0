@@ -17,12 +17,11 @@
     </head>
 
     <body class="limiter">
-      <!-- <div class="container-login100"> -->
-      <!-- <div class="cheatForm" id="resultContain"> -->
-      <div class="instaQueryForm">
+      <div class="instaQueryForm" id="resultContain">
         <table id="resultTable" border="1" class="table table-striped table-hover table-bordered instaQueryForm">
           <br>
           <div style="font-size: 20px;font-weight: 800; text-align: center;">中獎名單</div>
+          <br>
           <tr>
             <th><label for="">獎品</label></th>
             <th><label for="">得獎者</label></th>
@@ -35,8 +34,6 @@
           </c:forEach>
         </table>
       </div>
-      <!-- </div> -->
-      <!-- </div> -->
     </body>
 
     </html>
