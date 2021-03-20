@@ -110,7 +110,7 @@
 
 			</div>
 			<div id="picking"
-				style="background-color: gray; position: absolute;left: 50%;top: 50%; margin-top: -150px;margin-left: -280px; height: 300px;width:600px ;"
+				style="background-color: gray; position: absolute;left: 50%;top: 50%; margin-top: -200px;margin-left: -300px; height: 400px;width:600px ;"
 				hidden="true">
 				<p style="font-size: 100px;font-weight: 500;">抽獎中...</p>
 			</div>

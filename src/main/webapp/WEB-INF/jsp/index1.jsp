@@ -146,8 +146,9 @@
 			var cheatTableDivStyleHeight = cheatTableDivStyle.getPropertyValue('height').replace('px', '');
 			var numOfTr = document.getElementById('tb2').getElementsByTagName('tr').length;
 			var tdHeight = $('.index1_1st').height(); // 一列高度
+			console.log('addCheat()_tdHeight', tdHeight);
 			if (numOfTr > 3) {
-				cheatFormDiv.style.height = (parseInt(cheatTableDivStyleHeight) + tdHeight).toString() + 'px';
+				cheatFormDiv.style.height = (Number(cheatTableDivStyleHeight) + tdHeight).toString() + 'px';
 			}
 		}
 
@@ -160,8 +161,9 @@
 			var cheatTableDivStyleHeight = cheatTableDivStyle.getPropertyValue('height').replace('px', '');
 			var numOfTr = document.getElementById('tb2').getElementsByTagName('tr').length;
 			var tdHeight = $('.index1_1st').height(); // 一列高度
+			console.log('delCheat()_tdHeight', tdHeight);
 			if (numOfTr > 3) {
-				cheatFormDiv.style.height = (parseInt(cheatTableDivStyleHeight) - tdHeight).toString() + 'px';
+				cheatFormDiv.style.height = (Number(cheatTableDivStyleHeight) - tdHeight).toString() + 'px';
 			}
 			document.getElementById("tb2").removeChild(trObj);
 		}
@@ -190,7 +192,7 @@
 			var index2ContainStyle = window.getComputedStyle(index2Contain);
 			var heightOfindex2ContainStyle = index2ContainStyle.getPropertyValue('height').replace('px', '');
 			var tdHeight = $('#index2_1st').height(); // 一列高度
-			index2Contain.style.height = (parseInt(heightOfindex2ContainStyle) + tdHeight).toString() + 'px';
+			index2Contain.style.height = (Number(heightOfindex2ContainStyle) + tdHeight).toString() + 'px';
 		}
 
 		// 刪除當前獎品欄位
@@ -203,7 +205,7 @@
 			var index2ContainStyle = window.getComputedStyle(index2Contain);
 			var heightOfindex2ContainStyle = index2ContainStyle.getPropertyValue('height').replace('px', '');
 			var tdHeight = $('#index2_1st').height(); // 一列高度
-			index2Contain.style.height = (parseInt(heightOfindex2ContainStyle) - tdHeight).toString() + 'px';
+			index2Contain.style.height = (Number(heightOfindex2ContainStyle) - tdHeight).toString() + 'px';
 		}
 
 		function getRewards() {
