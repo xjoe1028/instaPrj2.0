@@ -90,7 +90,7 @@
 			<!-- index2.jsp 顯示view Div -->
 			<div id="div0"></div>
 			<!-- reuslt.jsp 顯示view Div -->
-			<div id="div1" class="cheatForm"></div>
+			<div id="div1"></div>
 		</div>
 	</body>
 	<script>
@@ -146,7 +146,6 @@
 			var cheatTableDivStyleHeight = cheatTableDivStyle.getPropertyValue('height').replace('px', '');
 			var numOfTr = document.getElementById('tb2').getElementsByTagName('tr').length;
 			var tdHeight = $('.index1_1st').height(); // 一列高度
-			console.log('addCheat()_tdHeight', tdHeight);
 			if (numOfTr > 3) {
 				cheatFormDiv.style.height = (Number(cheatTableDivStyleHeight) + tdHeight).toString() + 'px';
 			}
@@ -161,7 +160,6 @@
 			var cheatTableDivStyleHeight = cheatTableDivStyle.getPropertyValue('height').replace('px', '');
 			var numOfTr = document.getElementById('tb2').getElementsByTagName('tr').length;
 			var tdHeight = $('.index1_1st').height(); // 一列高度
-			console.log('delCheat()_tdHeight', tdHeight);
 			if (numOfTr > 3) {
 				cheatFormDiv.style.height = (Number(cheatTableDivStyleHeight) - tdHeight).toString() + 'px';
 			}
@@ -272,17 +270,12 @@
 		function settingResultPageHeight() {
 			var picking = document.getElementById("picking");
 			picking.hidden = true;
-			var numOfTr = document.getElementById('resultTable').getElementsByTagName('tr').length;
-			console.log('行數:', numOfTr);
-			var tr_height = ((parseInt(numOfTr) + 1) * 25);
-			console.log('高:', tr_height);
-			// 當行數的高度 > 原本高度 再去重算高度 否則就預設400px
-			var totalTrHeight = ((parseInt(numOfTr) + 3) * 25) + 25;
-			if (tr_height > 400) {
-				document.getElementById('resultContain').style.height = totalTrHeight.toString() + 'px';
-				document.getElementById('resultContain').style.marginTop = '-' + totalTrHeight + 'px';
-			} else {
-				document.getElementById('resultContain').style.height = '400px';
+			var numOfTr = document.getElementById('result_tbody').getElementsByTagName('tr').length;
+			var tr_height = $('#ctr1').height();
+			var resultContain_height = $('#resultContain').height();
+			// tbody行數 > 7  動態增加resultContain高度 
+			if (numOfTr > 7) {
+				$('#resultContain').height(resultContain_height + ((numOfTr - 7) * tr_height));
 			}
 		}
 

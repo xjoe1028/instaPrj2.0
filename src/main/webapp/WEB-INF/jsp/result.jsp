@@ -17,22 +17,26 @@
     </head>
 
     <body class="limiter">
-      <div class="instaQueryForm" id="resultContain">
-        <table id="resultTable" border="1" class="table table-striped table-hover table-bordered instaQueryForm">
-          <br>
-          <div style="font-size: 20px;font-weight: 800; text-align: center;">中獎名單</div>
-          <br>
-          <tr>
-            <th><label for="">獎品</label></th>
-            <th><label for="">得獎者</label></th>
-          </tr>
-          <c:forEach items="${returnData}" var="r">
-            <tr>
-              <td>${r.count}</td>
-              <td>${r.name}</td>
-            </tr>
-          </c:forEach>
-        </table>
+      <div class="cheatForm" id="resultContain">
+        <div class="instaQueryForm">
+          <table id="resultTable" border="1" class="table table-striped table-hover table-bordered instaQueryForm">
+            <br>
+            <div style="font-size: 20px;font-weight: 800; text-align: center;">中獎名單</div>
+            <br>
+            <thead id="result_thead">
+              <th><label for="">獎品</label></th>
+              <th><label for="">得獎者</label></th>
+            </thead>
+            <tbody id="result_tbody">
+              <c:forEach items="${returnData}" var="r" varStatus="rStatus">
+                <tr id="ctr${rStatus.index+1}">
+                  <td>${r.count}</td>
+                  <td>${r.name}</td>
+                </tr>
+              </c:forEach>
+            </tbody>
+          </table>
+        </div>
       </div>
     </body>
 
