@@ -264,7 +264,27 @@
 				index2Contain.hidden = true;
 				var picking = document.getElementById("picking");
 				picking.hidden = false;
+				this.setIntervalTimer();
 			}
+		}
+
+		function setIntervalTimer(){
+			var i = 0;
+			setInterval(() => {
+				if(i === 0){
+					document.getElementById('pickingText').innerHTML = '抽獎中';
+					i++;
+				}else if(i === 1){
+					document.getElementById('pickingText').innerHTML = '抽獎中.';
+					i++;
+				}else if(i === 2){
+					document.getElementById('pickingText').innerHTML = '抽獎中..';
+					i++;
+				}else if(i === 3){
+					document.getElementById('pickingText').innerHTML = '抽獎中...';
+					i=0;
+				}
+			}, 750);
 		}
 
 		function settingResultPageHeight() {
