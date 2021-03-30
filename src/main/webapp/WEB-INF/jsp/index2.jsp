@@ -55,7 +55,7 @@
 										<label for="" class="font-weight-bolder">標記人數：</label>
 									</div>
 								</div>
-								<div class="col-12 col-lg-4">
+								<div class="col-12 col-lg-3">
 									<select id="tagCount" name="tagCount" class="form-control input-sm selectpicker">
 										<option>0</option>
 										<option>1</option>
