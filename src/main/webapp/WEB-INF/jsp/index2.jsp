@@ -25,7 +25,7 @@
 							<div class="row">
 								<div class="col-12 col-lg-3">
 									<div class="row">
-										<label for="" class="font-weight-bolder">貼文網址：</label>
+										<label for="" class="font-weight-bolder" >url：</label>
 									</div>
 								</div>
 								<div class="col-12 col-lg-8">
@@ -37,12 +37,12 @@
 						<br>
 						<div class="col-12 mt-4 mb-2">
 							<div class="row">
-								<div class="col-12 col-lg-3">
+								<div class="col-12 col-lg-6">
 									<div class="row">
-										<label for="" class="font-weight-bolder">可以重複留言：</label>
+										<label for="" class="font-weight-bolder">Allow Repeating winners：</label>
 									</div>
 								</div>
-								<div class="col-12 col-lg-8">
+								<div class="col-12 col-lg-5">
 									<input id="repeat" type="checkbox" />
 								</div>
 							</div>
@@ -53,11 +53,11 @@
 						class="table table-striped table-hover table-bordered instaQueryForm">
 						<thead>
 							<tr>
-								<td class="col-xs-5"><label for="">獎品</label></td>
-								<td class="col-xs-2"><label for="">抽獎人數</label></td>
+								<td class="col-xs-5"><label for="">Prize</label></td>
+								<td class="col-xs-2"><label for="">Number Limit</label></td>
 								<td class="col-xs-2">
 									<button onclick="addPrize()" class="index2Btn">
-										增加
+										add
 									</button>
 								</td>
 							</tr>
@@ -97,8 +97,8 @@
 									<div class="container-login100-form-btn">
 										<div class="wrap-login100-form-btn">
 											<div class="login100-form-bgbtn"></div>
-											<button id="btn1" onclick="sendFun()" class="login100-form-btn">
-												抽獎！
+											<button id="btn1" onclick="sendFun()" class="index2Btn">
+												Lucky Draw!
 											</button>
 										</div>
 									</div>
@@ -112,7 +112,7 @@
 			<div id="picking"
 				style="position: absolute;left: 50%;top: 50%; margin-top: -100px;margin-left: -200px; height: 400px;width:600px ;"
 				hidden="true">
-				<p style="font-size: 100px;font-weight: 500;color: white;" id = "pickingText">抽獎中</p>
+				<p style="font-size: 100px;font-weight: 500;color: white;" id = "pickingText">Drawing</p>
 			</div>
 		</div>
 	</body>

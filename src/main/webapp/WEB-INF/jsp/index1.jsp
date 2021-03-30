@@ -121,7 +121,6 @@
 				contentType: "application/json; charset=UTF-8",
 				async: false, // 設定同步 預設true 非同步 防止alert前就先跳頁
 				success: function (data) {
-					alert("內定人員設定完畢！");
 					$("#cheatFormDiv").hide();
 					$("#div0").html(data);
 				},
@@ -184,7 +183,7 @@
 				+ "<option>9</option>"
 				+ "<option>10</option>"
 				+ "</select></td>"
-				+ "<td class='col-xs-2'><button onclick='delPrize(this)' class='index2Btn'>刪除</button></td>";
+				+ "<td class='col-xs-2'><button onclick='delPrize(this)' class='index2Btn'>delete</button></td>";
 			document.getElementById("tb").appendChild(trObj);
 			var index2Contain = document.getElementById("index2Contain");
 			var index2ContainStyle = window.getComputedStyle(index2Contain);
@@ -210,7 +209,6 @@
 			var rewards = new Array();
 			var tab = document.getElementById("tb");
 			var rows = tab.rows;
-			alert("獎項共: " + rows.length);
 			for (var i = 0; i < rows.length; i++) {
 				var rewardData = {
 					REWARD: rows[i].cells[0].children[0].value,
@@ -227,7 +225,7 @@
 			// var tag = document.getElementById("tag").value;
 			//var keyword = document.getElementById("keyword").value;
 			if (url.length == 0) {
-				alert("請輸入網址喔！");
+				alert("Please enter url!");
 			} else {
 				var tag = "0";
 				var keyword = "";
@@ -254,7 +252,7 @@
 					$("#div1").html(data);
 					settingResultPageHeight();
 				}).fail(function () {
-					alert("中獎人不重複時，獎項多於中獎人數！");
+					alert("阿呀，爬蟲被IG發現了，請稍等幾分鐘再試一次！");
 					location.reload();
 				});
 				// .always(function () {
@@ -272,16 +270,16 @@
 			var i = 0;
 			setInterval(() => {
 				if(i === 0){
-					document.getElementById('pickingText').innerHTML = '抽獎中';
+					document.getElementById('pickingText').innerHTML = 'Drawing';
 					i++;
 				}else if(i === 1){
-					document.getElementById('pickingText').innerHTML = '抽獎中.';
+					document.getElementById('pickingText').innerHTML = 'Drawing.';
 					i++;
 				}else if(i === 2){
-					document.getElementById('pickingText').innerHTML = '抽獎中..';
+					document.getElementById('pickingText').innerHTML = 'Drawing..';
 					i++;
 				}else if(i === 3){
-					document.getElementById('pickingText').innerHTML = '抽獎中...';
+					document.getElementById('pickingText').innerHTML = 'Drawing...';
 					i=0;
 				}
 			}, 750);

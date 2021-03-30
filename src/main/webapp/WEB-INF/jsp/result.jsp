@@ -21,11 +21,11 @@
         <div class="instaQueryForm">
           <table id="resultTable" border="1" class="table table-striped table-hover table-bordered instaQueryForm">
             <br>
-            <div style="font-size: 20px;font-weight: 800; text-align: center;">中獎名單</div>
+            <div style="font-size: 20px;font-weight: 800; text-align: center;">The Winners</div>
             <br>
             <thead id="result_thead">
-              <th><label for="">獎品</label></th>
-              <th><label for="">得獎者</label></th>
+              <th><label for="">Prize</label></th>
+              <th><label for="">Winner</label></th>
             </thead>
             <tbody id="result_tbody">
               <c:forEach items="${returnData}" var="r" varStatus="rStatus">
