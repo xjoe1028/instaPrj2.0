@@ -48,15 +48,12 @@ public class IndexController {
 	
 	@RequestMapping("/")
 	public String index1(Map<String, Object> map) {
-//		System.out.println("application.msg is ====>>" + msg);
-//		map.put("msg", msg);
 		log.info("in index1() ==> return index1");
 		return "index1";
 	}
 	
 	@RequestMapping("/cheat")
 	public String afterCheat(Model model) throws JsonProcessingException, InterruptedException {
-//		System.out.println("in cheat");
 		log.info("in afterCheat() ==> return index2");
 		return "index2";
 	}
@@ -81,13 +78,6 @@ public class IndexController {
 		}catch(ArrayIndexOutOfBoundsException e) {
 			model.addAttribute("returnData","留言不重複時，留言數小於中獎人數");
 		}		
-//		List<Student> students = new ArrayList<>();
-//        students.add(new Student(1,"小信",33));
-//        students.add(new Student(2,"小田",25));
-//        students.add(new Student(3,"小夏",19));
-//        students.add(new Student(4,"小方",23));
-//
-//        model.addAttribute("student",students);
 		return "result";
 	}
 

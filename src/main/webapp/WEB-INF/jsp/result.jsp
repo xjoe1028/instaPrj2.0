@@ -26,12 +26,14 @@
             <thead id="result_thead">
               <th><label for="">Prize</label></th>
               <th><label for="">Winner</label></th>
+              <th><label for="">Comment</label></th>
             </thead>
             <tbody id="result_tbody">
               <c:forEach items="${returnData}" var="r" varStatus="rStatus">
                 <tr id="ctr${rStatus.index+1}">
                   <td>${r.count}</td>
                   <td>${r.name}</td>
+                  <td>${r.content}</td>
                 </tr>
               </c:forEach>
             </tbody>

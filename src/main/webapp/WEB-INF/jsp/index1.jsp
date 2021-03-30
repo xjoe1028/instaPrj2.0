@@ -222,12 +222,11 @@
 		// 送出 抽獎
 		function sendFun() {
 			var url = document.getElementById("url").value;
-			// var tag = document.getElementById("tag").value;
+			var tag = document.getElementById("tagCount").value;
 			//var keyword = document.getElementById("keyword").value;
 			if (url.length == 0) {
 				alert("Please enter url!");
 			} else {
-				var tag = "0";
 				var keyword = "";
 				var repeat = document.getElementById("repeat").checked ? "1"
 					: "0";
@@ -255,9 +254,6 @@
 					alert("阿呀，爬蟲被IG發現了，請稍等幾分鐘再試一次！");
 					location.reload();
 				});
-				// .always(function () {
-				//   alert("complete");
-				// });
 				var index2Contain = document.getElementById("index2Contain");
 				index2Contain.hidden = true;
 				var picking = document.getElementById("picking");
@@ -266,7 +262,7 @@
 			}
 		}
 
-		function setIntervalTimer(){
+		function setIntervalTimer() {
 			var i = 0;
 			setInterval(() => {
 				if(i === 0){
