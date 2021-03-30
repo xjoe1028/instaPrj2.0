@@ -44,6 +44,7 @@ public class CommentController {
 		if (Integer.parseInt(tag) > 0) {
 			allComments = getCommentsByTag(allComments, tag);
 		}
+		
 		if (keywords.trim().length() > 0) {
 			allComments = getCommentsByWords(allComments, keywords);
 		}
@@ -152,7 +153,7 @@ public class CommentController {
 //		System.out.println("留言總數: " + count);
 //		System.out.println("OutPut Json: " + om.writeValueAsString(comments));
 
-		driver.close();
+		driver.quit();
 		return comments;
 	}
 

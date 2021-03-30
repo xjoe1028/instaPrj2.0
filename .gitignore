@@ -33,5 +33,9 @@ build/
 .vscode/
 
 
+### eclipse ###
+*.class
+*.bak
+
 
 

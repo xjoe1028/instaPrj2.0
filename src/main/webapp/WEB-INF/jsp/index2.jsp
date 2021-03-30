@@ -47,6 +47,31 @@
 								</div>
 							</div>
 						</div>
+						<br>
+						<div class="col-12 mt-4 mb-2">
+							<div class="row">
+								<div class="col-12 col-lg-3">
+									<div class="row">
+										<label for="" class="font-weight-bolder">標記人數：</label>
+									</div>
+								</div>
+								<div class="col-12 col-lg-4">
+									<select id="tagCount" name="tagCount" class="form-control input-sm selectpicker">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+							</div>
+						</div>
 					</form>
 					<br><br>
 					<table id="queryTable2" border="1"
@@ -112,7 +137,7 @@
 			<div id="picking"
 				style="position: absolute;left: 50%;top: 50%; margin-top: -100px;margin-left: -200px; height: 400px;width:600px ;"
 				hidden="true">
-				<p style="font-size: 100px;font-weight: 500;color: white;" id = "pickingText">抽獎中</p>
+				<p style="font-size: 100px;font-weight: 500;color: white;" id="pickingText">抽獎中</p>
 			</div>
 		</div>
 	</body>

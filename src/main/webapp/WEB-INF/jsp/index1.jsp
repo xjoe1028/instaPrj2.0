@@ -224,12 +224,11 @@
 		// 送出 抽獎
 		function sendFun() {
 			var url = document.getElementById("url").value;
-			// var tag = document.getElementById("tag").value;
+			var tag = document.getElementById("tagCount").value;
 			//var keyword = document.getElementById("keyword").value;
 			if (url.length == 0) {
 				alert("請輸入網址喔！");
 			} else {
-				var tag = "0";
 				var keyword = "";
 				var repeat = document.getElementById("repeat").checked ? "1"
 					: "0";
@@ -257,9 +256,6 @@
 					alert("中獎人不重複時，獎項多於中獎人數！");
 					location.reload();
 				});
-				// .always(function () {
-				//   alert("complete");
-				// });
 				var index2Contain = document.getElementById("index2Contain");
 				index2Contain.hidden = true;
 				var picking = document.getElementById("picking");
@@ -268,21 +264,21 @@
 			}
 		}
 
-		function setIntervalTimer(){
+		function setIntervalTimer() {
 			var i = 0;
 			setInterval(() => {
-				if(i === 0){
+				if (i === 0) {
 					document.getElementById('pickingText').innerHTML = '抽獎中';
 					i++;
-				}else if(i === 1){
+				} else if (i === 1) {
 					document.getElementById('pickingText').innerHTML = '抽獎中.';
 					i++;
-				}else if(i === 2){
+				} else if (i === 2) {
 					document.getElementById('pickingText').innerHTML = '抽獎中..';
 					i++;
-				}else if(i === 3){
+				} else if (i === 3) {
 					document.getElementById('pickingText').innerHTML = '抽獎中...';
-					i=0;
+					i = 0;
 				}
 			}, 750);
 		}
