@@ -383,8 +383,6 @@ iframe {
 /* index2.jsp Button 小按鈕*/
 .index2Btn{
   background-color: #2b5876;
-  font-size: 16px;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
