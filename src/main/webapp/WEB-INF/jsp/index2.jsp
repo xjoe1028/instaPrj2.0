@@ -25,7 +25,7 @@
 							<div class="row">
 								<div class="col-12 col-lg-3">
 									<div class="row">
-										<label for="" class="font-weight-bolder" >url：</label>
+										<label for="" class="font-weight-bolder" >Url Address：</label>
 									</div>
 								</div>
 								<div class="col-12 col-lg-8">
@@ -37,12 +37,12 @@
 						<br>
 						<div class="col-12 mt-4 mb-2">
 							<div class="row">
-								<div class="col-12 col-lg-6">
+								<div class="col-12 col-lg-3">
 									<div class="row">
 										<label for="" class="font-weight-bolder">Allow Repeating winners：</label>
 									</div>
 								</div>
-								<div class="col-12 col-lg-5">
+								<div class="col-12 col-lg-8">
 									<input id="repeat" type="checkbox" />
 								</div>
 							</div>
@@ -52,7 +52,7 @@
 							<div class="row">
 								<div class="col-12 col-lg-3">
 									<div class="row">
-										<label for="" class="font-weight-bolder">標記人數：</label>
+										<label for="" class="font-weight-bolder">Tag Number：</label>
 									</div>
 								</div>
 								<div class="col-12 col-lg-3">
